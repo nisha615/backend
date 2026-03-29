@@ -8,11 +8,10 @@ const Product = require("./models/Product");
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-// 3. DB connect
-mongoose.connect("mongodb://127.0.0.1:27017/marketplace")
+mongoose.connect("mongodb+srv://nisha615:<db_password>@cluster0.8x8ayz9.mongodb.net/marketplace?retryWrites=true&w=majority")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
+
 
 // 🔥 4. CRUD ROUTES
 
