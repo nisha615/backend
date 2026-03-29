@@ -8,7 +8,7 @@ const Product = require("./models/Product");
 const app = express();
 app.use(cors());
 app.use(express.json());
-mongoose.connect("mongodb+srv://nisha615:<db_password>@cluster0.8x8ayz9.mongodb.net/marketplace?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://nisha615:<nishnish890M,>@cluster0.8x8ayz9.mongodb.net/marketplace?retryWrites=true&w=majority")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
