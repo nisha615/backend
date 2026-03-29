@@ -70,7 +70,14 @@ app.delete("/delete-product/:id", async (req, res) => {
     res.send(err);
   }
 });
-
+app.get("/add-product", async (req, res) => {
+  const product = new Product({
+    name: req.query.name,
+    price: req.query.price
+  });
+  await product.save();
+  res.send("Product added via GET ✅");
+});
 // 5. server start
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server running on port 5000");
